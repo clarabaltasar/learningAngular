@@ -1,0 +1,16 @@
+<h2> Componente de test {{name}} </h2>
+    
+    <h3
+       [style.background]="red" 
+       *ngIf="property !=true"> 
+            {{properties}}
+    </h3>
+    <h3 [style.background]="orange" 
+        *ngIf="property"> 
+            {{other}}
+    </h3>
+
+    <h2> Lista de elementos en un array </h2>
+        <ul>
+            <li *ngFor= "let elem of array">{{elem}} </li>
+        </ul>
