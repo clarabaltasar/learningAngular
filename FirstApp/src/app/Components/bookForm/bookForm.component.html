@@ -1,0 +1,57 @@
+<div class="Container">
+
+
+  <!--  <form>
+        <label for="title">Título</label>
+        <input 
+        type="text"
+        class="form-control"
+        id="title"
+        required
+        [(ngModel)] = "model.tittle"
+        name="title"
+        />
+
+        <label for="title">Autor</label>
+        <input 
+        type="text"
+        class="form-control"
+        id="author"
+        required
+        [(ngModel)] = "model.author"
+        name="author"
+        />
+
+        <label for="title">URL</label>
+        <input 
+        type="text"
+        class="form-control"
+        id="url"
+        [(ngModel)] = "model.url"
+        name="url"
+        />
+
+        <button type="submit">
+            Enviar
+        </button>
+    </form>-->
+    <div class="d-flex justify-content-center align-items-center container ">
+        <div class= "card-body">
+            <div class = "card-title">
+                Insert a new book
+            </div>
+            <div class = "form-group">
+                <input type="text" [(ngModel)]="selectedItem.nameItem" placeholder="What's the name of the book?" class ="form-control">
+            </div>
+            <div class = "form-group">
+                <input type="text" [(ngModel)]="selectedItem.type" placeholder="Who is the author?" class ="form-control">
+            </div>
+            <div class = "form-group">
+                <input type="text" [(ngModel)]="selectedItem.type" placeholder="Where it is available?" class ="form-control">
+            </div>
+            <button (click)="addOrEdit()" class= "btn-danger btn-sm">
+                Submit 
+            </button>
+        </div>
+    </div>
+</div>
