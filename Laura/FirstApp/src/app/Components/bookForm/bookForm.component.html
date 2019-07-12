@@ -52,6 +52,12 @@
             <button (click)="addOrEdit()" class= "btn-danger btn-sm">
                 Submit 
             </button>
+            <button
+                *ngIf="selectedItem.id !== 0"
+                class= "btn btn-outline-danger btn-sm"
+                (click) = "delete()">
+                Delete
+            </button>
         </div>
     </div>
 </div>

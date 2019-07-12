@@ -7,6 +7,8 @@ import { FooterComponent } from './Components/footer/footer.component';
 import { BodyComponent } from './Components/body/body.component';
 import { FormsModule} from '@angular/forms';
 import { BookFormComponent } from './Components/bookForm/bookForm.component';
+import { BookShowComponent } from './Components/book-show/book-show.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -14,11 +16,13 @@ import { BookFormComponent } from './Components/bookForm/bookForm.component';
     HeaderComponent,
     FooterComponent,
     BodyComponent,
-    BookFormComponent
+    BookFormComponent,
+    BookShowComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

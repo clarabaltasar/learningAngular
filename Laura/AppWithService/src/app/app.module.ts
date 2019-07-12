@@ -3,14 +3,15 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
-import {ProductServices} from 'app/services/products.service';
+import {ProductsService } from 'C:/Users/LPEREZ/git/learningAngular/Laura/AppWithService/src/app/services/products.service';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    ProductsService
   ],
   providers: [],
   bootstrap: [AppComponent]
