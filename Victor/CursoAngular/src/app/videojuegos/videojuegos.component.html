@@ -1,0 +1,11 @@
+<h2> Componente de Videojuegos sin la clase </h2>
+        <h2> Componente de Videojuegos con la clase {{nombre}} </h2>
+        <h2 [style.background]="'red'" *ngIf="mostrar_retro != true"> El mejor juego es:  {{mejor_juego}} </h2>
+        <h2 [style.background]="color" *ngIf="mostrar_retro == true" > El mejor juego retro es:  {{mejor_juego_retro}} </h2>
+
+        <h2> lista de videojuegos</h2>
+        <ul>
+            <li *ngFor="let varJuegos of arrayvideojuegos">{{varJuegos}}</li>
+
+        </ul>
+
