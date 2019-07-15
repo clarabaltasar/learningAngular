@@ -8,7 +8,7 @@ import { Product } from '../models/product';
 export class ProductService {
 
   productList: AngularFireList<any>;
-  selectProduct: Product = new Product();
+  selectedProduct: Product = new Product();
 
   constructor(private firebase: AngularFireDatabase) { }
 
