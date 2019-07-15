@@ -1,6 +1,9 @@
 <div class="card mt-5">
     <div class="card-body">
         <form #productForm= "ngForm" (ngSubmit)="onSubmit(productForm)">
+            <!-- Campo oculto que nos permite reutilizar el formulario para editar datos-->
+            <input type="hidden" name="$key" #key = "ngModel"
+            [(ngModel)]= "productService.selectedProduct.$key">
             <div class="form-group">
                 <input 
                 type="text"
@@ -43,11 +46,12 @@
        
             <div class="form-group">
                 <button class="btn btn-warning" type="submit">
-                        <i class="fas fa-plus-circle"></i>
-                        Add A Product
+                    <i class="fas fa-plus-circle"></i>
+                    Add A Product
                 </button>
-                <button class="btn btn-dangerous" type="reset">
-                    <i class="fas da-sync-alt"></i> Reset
+                <button class="btn btn-danger" type="reset" (click) ="resetForm(productForm)">
+                    <i class="fas fa-sync-alt"></i>
+                    Reset
                 </button>
             </div>
        

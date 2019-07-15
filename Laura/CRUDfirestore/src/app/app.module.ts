@@ -1,17 +1,20 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { FormsModule } from '@angular/forms'
+import { FormsModule } from '@angular/forms';
+
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
+import {ToastrModule} from 'ngx-toastr';
 
 import { AppComponent } from './app.component';
 
 //FireBase
-import {AngularFireDatabaseModule} from 'angularfire2/database';
 import {AngularFireModule} from 'angularfire2'
+import {AngularFireDatabaseModule} from 'angularfire2/database';
 import {environment} from '../environments/environment';
 
 //FontAwesome
-//import {} from '@fortawesome/angular-fontawesome';
+import {AngularFontAwesomeModule} from 'angular-font-awesome';
 
 //Component
 import { ProductsComponent } from './components/products/products.component';
@@ -21,26 +24,22 @@ import { ProductComponent } from './component/products/product/product.component
 //Services
 import {ProductService} from './services/product.service';
 
-import {Routes, RouterModule} from '@angular/router';
-import { ProductsGuard } from './guards/products.guard';
-
-const routes:Routes=[
-  {path:'', redirectTo:'products', pathMatch:'full'},
-  {path:'products', component:ProductsComponent, canActivate:[ProductsGuard]},
-  {path:'products-list', component:ProductListComponent}
-]
 @NgModule({
   declarations: [
     AppComponent,
     ProductsComponent,
     ProductListComponent,
-    ProductComponent
+    ProductComponent,
+    
   ],
   imports: [
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     FormsModule,
+    AngularFontAwesomeModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot()
     //RouterModule.forRoot(routes)
  ],
   providers: [
