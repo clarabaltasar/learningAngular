@@ -12,7 +12,7 @@ export class ProductService {
 
   constructor(private firebase: AngularFireDatabase) { }
 
-  getProduct()
+  getProducts()
   {
     return this.productList = this.firebase.list('products');
   }

@@ -5,5 +5,5 @@
     <input formControlName="user" type="text"/>
     <input formControlName="password" type="password"/>
 
-    <button (click)="login($event)">LOGIN</button>
+    <button (click)="login($event)" [routerLink]="['/home']">LOGIN</button>
 </form>
