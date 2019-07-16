@@ -19,7 +19,7 @@ import {AngularFontAwesomeModule} from 'angular-font-awesome';
 //Component
 import { ProductsComponent } from './components/products/products.component';
 import { ProductListComponent } from './components/products/product-list/product-list.component';
-import { ProductComponent } from './component/products/product/product.component'
+import { ProductComponent } from './components/products/product/product.component'
 
 //Services
 import {ProductService} from './services/product.service';

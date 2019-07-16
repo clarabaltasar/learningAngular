@@ -1,5 +1,8 @@
 <div class="card mt-5">
     <div class="card-body">
+        <h6 class="text-center">
+            Form of Products
+        </h6>
         <form #productForm= "ngForm" (ngSubmit)="onSubmit(productForm)">
             <!-- Campo oculto que nos permite reutilizar el formulario para editar datos-->
             <input type="hidden" name="$key" #key = "ngModel"

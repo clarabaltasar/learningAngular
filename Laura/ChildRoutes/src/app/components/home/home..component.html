@@ -1,9 +1,8 @@
-<p>login works!</p>
-
+<p>home works!</p>
 
 <form [formGroup]="loginForm">
     <input formControlName="user" type="text"/>
     <input formControlName="password" type="password"/>
 
-    <button (click)="login($event)" [routerLink]="['/home']">LOGIN</button>
+    <button (click)="login($event)">LOGIN</button>
 </form>
